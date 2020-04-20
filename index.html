@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>JavaScript Expercises</title>
+    <meta name="description" content="JavaScript Exercises" />
+    <meta name="author" content="Jason Ephraim" />
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+  </head>
+
+  <body>
+    <!--Palindrome Checker start-->
+    <script type="text/javascript">
+      // Palindrome Checker
+
+      function palindrome(str) {
+        var palin = str.split("").reverse().join("");
+
+        if (palin === str) {
+          return str + " is a palindrome";
+        } else {
+          return str + " is not a palindrome";
+        }
+      }
+      palindrome("eye"); //Succeeds
+      palindrome("Race car"); //Fails
+
+      // Duplicate Remover
+
+      function duplicateRemover(a) {
+        return a.sort().filter(function (item, pos, ary) {
+          return !pos || item != ary[pos - 1];
+        });
+      }
+
+      duplicateRemover(["John", "Mary", "Alex", "Steve", "Mary", "John"]);
+
+      // Does Item Exist In Array
+
+      function isInArray(value, array) {
+        if (array.indexOf(value) > -1 == True) {
+          return value + " is in the array";
+        } else {
+          return value + " is not in the array";
+        }
+      }
+
+      isInArray(1, [1, 2, 3]); // true
+    </script>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
